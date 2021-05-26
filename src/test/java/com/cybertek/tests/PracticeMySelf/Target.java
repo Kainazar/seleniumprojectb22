@@ -13,20 +13,27 @@ public class Target {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.target.com/");
-        driver.findElement(By.xpath("(//*[.='Categories'])[2]")).click();
+//        driver.findElement(By.xpath("(//*[.='Categories'])[2]")).click();
+//
+//        List< WebElement > links = driver.findElements(By.xpath("//*[@class='NavigationListItem-ljyubl-0 chzHFE']"));
+//
+//        for (WebElement each : links) {
+//
+//            Thread.sleep(2000);
+//            System.out.println("Return text ---> "+ each.getText() );
+//        }
+//            Thread.sleep(2000);
 
-        List< WebElement > links = driver.findElements(By.xpath("//*[@class='NavigationListItem-ljyubl-0 chzHFE']"));
+        driver.findElement(By.linkText("Categories")).click();
+        List<WebElement> links = driver.findElements(By.xpath("//ul[@aria-label='Categories menu']//li"));
 
         for (WebElement each : links) {
 
-            Thread.sleep(2000);
+            Thread.sleep(500);
             System.out.println("Return text ---> "+ each.getText() );
         }
-            Thread.sleep(2000);
-
-
-
-        }
-
+        Thread.sleep(2000);
     }
+
+}
 

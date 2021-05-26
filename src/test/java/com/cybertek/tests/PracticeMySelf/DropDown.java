@@ -45,11 +45,7 @@ public class DropDown {
         driver.findElement(By.xpath("//*[.='Google']")).click();
         Thread.sleep(2000);
 
-       // System.out.println("First option select "+element.getText());
-        System.out.println("First option select "+dataBirthYear.getText());
-        System.out.println("First option select "+year.getText());
-        System.out.println("First option select "+data.getText());
-        System.out.println("First option select "+state.getText());
+
 
 
         driver.close();
