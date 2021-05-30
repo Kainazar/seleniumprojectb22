@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class TC1DropDown {
+public class TC2DropDown {
     public static void main(String[] args) throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
@@ -25,6 +25,15 @@ public class TC1DropDown {
         Thread.sleep(2500);
         select.selectByVisibleText("California");
 
+        String expectedState= "California";
+        String actualState=select.getFirstSelectedOption().getText();
+
+        if (actualState.contains(expectedState)) {
+            System.out.println("Verification Passed!");
+        } else {
+            System.out.println("Verification Failed!");
+        }
+
         Thread.sleep(2500);
 
 
@@ -40,5 +49,7 @@ public class TC1DropDown {
         Thread.sleep(2500);
         driver.close();
     }
+
 }
+
 
