@@ -21,13 +21,13 @@ public class Task {
         Select drop2 = new Select(element1);
         drop2.selectByVisibleText("Filter by technique used");
 
-        WebElement element2 = driver.findElement(By.xpath("//*[@id=\"E1750138\"]"));
-        Select drop3 = new Select(element2);
-        drop3.selectByValue("Specifically");
+//        WebElement element2 = driver.findElement(By.xpath("//*[@id=\"E1750138\"]"));
+//        Select drop3 = new Select(element2);
+//        drop3.selectByValue("Specifically");
 
-        WebElement element3 = driver.findElement(By.xpath("//*[@id='E1285865']"));
-        Select drop4 = new Select(element3);
-        drop4.selectByVisibleText("Cell fusion");
+//        WebElement element3 = driver.findElement(By.xpath("//*[@id='E1285865']"));
+//        Select drop4 = new Select(element3);
+//        drop4.selectByVisibleText("Cell fusion");
 
         WebElement element5 = driver.findElement(By.xpath("(//*[@style='Width: 100%;'])[4]"));
         Select drop6 = new Select(element5);
@@ -55,8 +55,8 @@ public class Task {
 
         System.out.println(drop1.getFirstSelectedOption().getText());
         System.out.println(drop2.getFirstSelectedOption().getText());
-        System.out.println(drop3.getFirstSelectedOption().getText());
-        System.out.println(drop4.getFirstSelectedOption().getText());
+        //System.out.println(drop3.getFirstSelectedOption().getText());
+        //System.out.println(drop4.getFirstSelectedOption().getText());
         System.out.println(drop6.getFirstSelectedOption().getText());
         System.out.println(drop5.getFirstSelectedOption().getText());
         System.out.println(drop7.getFirstSelectedOption().getText());
