@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Target {
@@ -26,13 +27,18 @@ public class Target {
 
         driver.findElement(By.linkText("Categories")).click();
         List<WebElement> links = driver.findElements(By.xpath("//ul[@aria-label='Categories menu']//li"));
-
-        for (WebElement each : links) {
-
-            Thread.sleep(500);
-            System.out.println("Return text ---> "+ each.getText() );
+        ArrayList<String> linkby = new ArrayList<>();
+        for (int i = 1; i < links.size(); i++) {
+            linkby.add(links.get(i).getText());
         }
-        Thread.sleep(2000);
+
+
+
+        System.out.println((linkby));
+
+
+
+
     }
 
 }
