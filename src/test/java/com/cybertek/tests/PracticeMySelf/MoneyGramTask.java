@@ -1,4 +1,4 @@
-package com.cybertek;
+package com.cybertek.tests.PracticeMySelf;
 
 import com.cybertek.tests.day4_cssSelector_xpath.WebDriverFactory;
 import org.junit.Test;
