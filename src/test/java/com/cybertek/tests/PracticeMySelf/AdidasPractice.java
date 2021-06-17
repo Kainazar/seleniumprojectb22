@@ -58,6 +58,7 @@ public class AdidasPractice {
         System.out.println("expectedOrderAmmount = " + expectedOrderAmmount);
 
         Assert.assertEquals(actualAmmount,expectedOrderAmmount);
+
     }
 
     @AfterMethod

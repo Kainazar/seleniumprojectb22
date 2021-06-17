@@ -46,6 +46,7 @@ public class TS2_3 {
         driver.navigate().back();
 
         WebElement choose1 = driver.findElement(By.xpath("(//div[@class='btn-group'])[1]"));
+
         choose1.click();
         WebElement csv = driver.findElement(By.xpath("//a[@data-index='0']"));
         csv.click();

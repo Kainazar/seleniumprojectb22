@@ -19,12 +19,12 @@ public class WebDriverFactory {
         getDriver("chrome");
     }
 
-    public static WebDriver getDriver(String browserType) {
+    public static WebDriver getDriver(String browser) {
         WebDriver driver = null;
-        if (browserType.equalsIgnoreCase("chrome")) {
+        if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
-        } else if (browserType.equalsIgnoreCase("firefox")) {
+        } else if (browser.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
         }

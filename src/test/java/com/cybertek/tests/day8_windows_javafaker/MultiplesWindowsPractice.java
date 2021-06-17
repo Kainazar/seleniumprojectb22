@@ -31,8 +31,9 @@ public class MultiplesWindowsPractice {
         ((JavascriptExecutor) driver).executeScript("window.open('http://facebook.com','_blank');");
 
         for (String each : driver.getWindowHandles()) {
-
+            driver.switchTo().window(each);
             System.out.println("Title in current page: " + driver.getTitle());
+
 
             if (driver.getTitle().contains("Etsy")){
 
