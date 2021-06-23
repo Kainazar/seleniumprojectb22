@@ -16,7 +16,7 @@ public class TS2_3 {
     public void SetupClass() throws InterruptedException {
         driver = WebDriverFactory.getDriver("chrome");
         //   driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://qa3.vytrack.com/user/login");
 
         WebElement userName = driver.findElement(By.xpath("//input[@type='text']"));

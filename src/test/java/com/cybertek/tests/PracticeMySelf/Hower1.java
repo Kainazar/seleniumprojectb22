@@ -23,11 +23,26 @@ public class Hower1 {
             public void setup() throws InterruptedException {
         Driver.getDriver().get("http://practice.cybertekschool.com/hovers");
         Actions actions = new Actions(Driver.getDriver());
+
         actions.moveToElement(Driver.getDriver().findElement(By.xpath("(//*[@alt='User Avatar'])[1]"))).perform();
-        Thread.sleep(3000);
+        Driver.getDriver().findElement(By.xpath("(//*[@alt='User Avatar'])[1]")).isDisplayed();
+        Thread.sleep(2000);
+
         actions.moveToElement(Driver.getDriver().findElement(By.xpath("(//*[@alt='User Avatar'])[2]"))).perform();
-        Thread.sleep(3000);
+        Driver.getDriver().findElement(By.xpath("(//*[@alt='User Avatar'])[2]")).isDisplayed();
+
+        Thread.sleep(2000);
+
         actions.moveToElement(Driver.getDriver().findElement(By.xpath("(//*[@alt='User Avatar'])[3]"))).perform();
+        Thread.sleep(2000);
+        Driver.getDriver().findElement(By.xpath("(//*[@alt='User Avatar'])[3]")).isDisplayed();
+
+
+
+
+
+
+
 
 
 
