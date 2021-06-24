@@ -1,6 +1,6 @@
 package com.cybertek.tests.day12_actions_upload_jsexecutor;
 
-import com.cybertek.tests.utilities.BrowserUtil;
+import com.cybertek.tests.utilities.BrowserUtils;
 import com.cybertek.tests.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -17,7 +17,7 @@ public class JSExecutorPractices {
         Driver.getDriver().get("http://practice.cybertekschool.com/infinite_scroll");
 
         //((JavascriptExecutor) Driver.getDriver()).executeScript("")
-        BrowserUtil.sleep(1);
+        BrowserUtils.sleep(1);
         // Down casting our driver type to JavascriptExecutor so we can reach methods in this interface
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
@@ -26,7 +26,7 @@ public class JSExecutorPractices {
 
         for (int i = 0; i < 10; i++) {
 
-            BrowserUtil.sleep(1);
+            BrowserUtils.sleep(1);
             js.executeScript("window.scrollBy(0, 750)");
 
         }
@@ -44,11 +44,11 @@ public class JSExecutorPractices {
 
         //use js.executor with different scrolling JavaScript function
         //scroll down to cybertekSchool Link
-        BrowserUtil.sleep(1);
+        BrowserUtils.sleep(1);
         js.executeScript("arguments[0].scrollIntoView(true)", cybertekSchoolLink);
 
         //scroll up to Home link
-        BrowserUtil.sleep(1);
+        BrowserUtils.sleep(1);
         js.executeScript("arguments[0].scrollIntoView(true)", homeLink);
 
 

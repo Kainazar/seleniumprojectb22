@@ -1,7 +1,7 @@
 package com.cybertek.tests.day9_properties_browser_utils;
 
 import com.cybertek.tests.day4_cssSelector_xpath.WebDriverFactory;
-import com.cybertek.tests.utilities.BrowserUtil;
+import com.cybertek.tests.utilities.BrowserUtils;
 import com.cybertek.tests.utilities.ConfigurationReader;
 import com.cybertek.tests.utilities.LibraryUtils;
 import org.openqa.selenium.By;
@@ -32,7 +32,7 @@ public class P1_Library_Login {
        LibraryUtils.loginLibrary(driver);
 
 //    6. Print out count of all the links on landing page
-      BrowserUtil.sleep(3);
+      BrowserUtils.sleep(3);
       List <WebElement> allLinks=   driver.findElements(By.xpath("//body//a"));
      System.out.println("allLinks = " + allLinks.size());
 

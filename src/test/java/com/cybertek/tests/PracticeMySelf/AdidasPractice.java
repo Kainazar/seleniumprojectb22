@@ -1,7 +1,7 @@
 package com.cybertek.tests.PracticeMySelf;
 
 import com.cybertek.tests.day4_cssSelector_xpath.WebDriverFactory;
-import com.cybertek.tests.utilities.BrowserUtil;
+import com.cybertek.tests.utilities.BrowserUtils;
 import com.cybertek.tests.utilities.OfficeHoursUtils1;
 import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
@@ -46,7 +46,7 @@ public class AdidasPractice {
         driver.findElement(By.id("month")).sendKeys(String.valueOf(faker.number().numberBetween(1,12)));
         driver.findElement(By.id("year")).sendKeys(String.valueOf(faker.number().numberBetween(2022,2030)));
         driver.findElement(By.xpath("//button[.='Purchase']")).click();
-        BrowserUtil.sleep(1);
+        BrowserUtils.sleep(1);
         String confirmation = driver.findElement(By.xpath("//p[@class='lead text-muted ']")).getText();
         System.out.println("confirmation = " + confirmation);
 

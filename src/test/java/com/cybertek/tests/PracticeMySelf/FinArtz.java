@@ -1,7 +1,7 @@
 package com.cybertek.tests.PracticeMySelf;
 
 import com.cybertek.tests.day4_cssSelector_xpath.WebDriverFactory;
-import com.cybertek.tests.utilities.BrowserUtil;
+import com.cybertek.tests.utilities.BrowserUtils;
 import com.cybertek.tests.utilities.ConfigurationReader;
 import com.cybertek.tests.utilities.OfficeHoursUtils1;
 import org.openqa.selenium.WebDriver;
@@ -30,7 +30,7 @@ public class FinArtz {
     public void loginTest() throws InterruptedException {
         // Adding user test
         OfficeHoursUtils1.addUserTest(driver, addUserUrl);
-        BrowserUtil.sleep(3);
+        BrowserUtils.sleep(3);
         // Positive Login Test
         Assert.assertTrue(OfficeHoursUtils1.positiveLoginTest(driver,loginUrl));
 
@@ -38,7 +38,7 @@ public class FinArtz {
     }
     @AfterMethod
     public void tearDown () {
-        BrowserUtil.sleep(3);
+        BrowserUtils.sleep(3);
          driver.close();
     }
 }

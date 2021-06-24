@@ -1,6 +1,6 @@
 package com.cybertek.tests.utilities;
 
-public class BrowserUtil {
+public class BrowserUtils {
 /**
  * Method that will accept int
  * Wait for given second duration.

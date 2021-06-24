@@ -1,6 +1,6 @@
 package com.cybertek.tests.day13_actions_pom_design;
 
-import com.cybertek.tests.utilities.BrowserUtil;
+import com.cybertek.tests.utilities.BrowserUtils;
 import com.cybertek.tests.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -27,7 +27,7 @@ public class ActionsPractices {
         Actions actions = new Actions(Driver.getDriver());
 
         //use the 'actions' object to double click to already located web element
-        BrowserUtil.sleep(2);
+        BrowserUtils.sleep(2);
         actions.doubleClick(textToDoubleClick);
         actions.perform();
 
