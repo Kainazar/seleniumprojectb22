@@ -4,7 +4,10 @@ import com.cybertek.tests.utilities.ConfigurationReader;
 import com.cybertek.tests.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 public class TS1 {
    /**
@@ -37,12 +40,32 @@ public class TS1 {
        Thread.sleep(2000);
        vehicle.click();
 
-       WebElement exportGrid = Driver.getDriver().findElement(By.xpath("(//div[@class='btn-group'])[1]"));
+       WebElement exportGrid = Driver.getDriver().findElement(By.xpath("//div[@class='pull-left grid-toolbar-mass-actions']"));
        Thread.sleep(2000);
        exportGrid.click();
 
+       Assert.assertTrue(exportGrid.isDisplayed());
        System.out.println("Export Grid is clickable "+exportGrid.isEnabled());
 
 
-   }
-}
+
+
+      }
+    @Test
+   public void check_pages(){
+      List<WebElement> pages = Driver.getDriver().findElements(By.xpath("//*[@class='fa-chevron-right hide-text']"));
+       for (int i = 1; i <pages.size() ; i++) {
+          System.out.println(pages.size());
+
+
+
+       }
+
+       }
+
+       }
+
+
+
+
+

@@ -41,7 +41,7 @@ is not reachable from outside
                case "chrome":
                    WebDriverManager.chromedriver().setup();
                    driver = new ChromeDriver();
-                   driver.manage().window().maximize();
+                   //driver.manage().window().maximize();
                    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                    break;
                case "firefox":
